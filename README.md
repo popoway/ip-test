@@ -44,4 +44,4 @@ Make sure CORS is correctly configured on your server, otherwise XHR request wil
 Sample configuration: [nginx](https://github.com/popoway/ip-test/blob/master/ip-test.conf)
 
 # License
-[MIT](https://github.com/popoway/ip-test/blob/master/LICENSE)
+[MIT](https://popoway.mit-license.org/)

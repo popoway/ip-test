@@ -4,12 +4,14 @@ var ipv6 = 'https://ipv6-test.app.popoway.cloud/';
 
 // function to fetch user IP
 function fetchIP(elemId, url) {
-  $( "#" + elemId ).load( url, function( response, status, xhr ) {
-    if ( status == "error" ) {
-      var msg = "Not supported";
-      $( "#" + elemId ).text( msg );
-    }
-  });
+  fetch(url)
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(text) {
+      var elem = document.getElementById(elemId);
+      if (elem) elem.textContent = text;
+    })
 }
 
 // fetch both IP versions
